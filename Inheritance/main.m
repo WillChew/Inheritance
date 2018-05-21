@@ -7,11 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Vehicle.h"
+#import "Train.h"
+#import "Bicycle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        Train *train = [[Train alloc]init];
+        [train makeNoise];
+        [train setCurrentSpeed:23];
+        NSLog(@"%@",[train description]);
+        
+        Bicycle *bike = [[Bicycle alloc]init];
+        [bike setHasBasket:YES];
+        [bike setCurrentSpeed:5];
+        NSLog(@"%@", [bike description]);
+        
+        
+        
+        
+        
+        
     }
     return 0;
 }
